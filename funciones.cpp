@@ -159,6 +159,22 @@ void twoPlayers()
     rlutil::anykey();
 }
 
+string mejorJugador;
+int mejorPuntaje=0;
+
+void estadisticas ()
+{
+    if (mejorJugador.empty())
+{ cout<< "No se ha jugado ningun juego aun."<< endl;
+}
+else if (puntajeTotal2> puntajeTotal1){
+    cout << "El jugador con puntaje mas alto es " << nombreJugador2 << "con " << puntajeTotal2 << " puntos."<< endl;
+}
+    else{
+         cout << "El jugador con puntaje mas alto es " << nombreJugador1 << "con " << puntajeTotal1 << " puntos."<< endl;
+}
+}
+
 void creditos ()
 {
     cout << endl << "Juego creado por el grupo N 21 de Programacion 1 para la UTN-Facultad Regional General Pacheco" << endl << endl;
@@ -280,7 +296,7 @@ void options(int opc)
         break;
     case 3:
         rlutil::locate(50, 20);
-        cout << "Esta es la opcion 3 (Estadísticas)" << endl;
+        cout << Estadisticas()" << endl;
         break;
     case 4:
         rlutil::locate(50, 20);
